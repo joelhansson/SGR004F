@@ -1,5 +1,5 @@
 ﻿* Encoding: UTF-8.
-* SGR004F, Lab assignment 2, Joel Hansson.
+* SGR004F, Lab assignment 3, Joel Hansson.
 
 * Extract title from Name.
 
