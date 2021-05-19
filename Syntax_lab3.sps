@@ -42,7 +42,7 @@ IF  (mwc = 2) adults = Parch.
 EXECUTE.
 
 
-* Number of accomanying children (self not included).
+* Number of accompanying children (self not included).
 
 IF  (mwc < 2) children = Parch.
 IF  (mwc = 2) children = SibSp.
@@ -55,7 +55,7 @@ RECODE adults (1=0) (2 thru Highest=1) INTO d_adults.
 EXECUTE.
 
 
-* accomanying children dummiy.
+* accompanying children dummy.
 
 RECODE children (0=0) (ELSE=1) INTO d_children.
 EXECUTE.
@@ -104,7 +104,3 @@ NOMREG Survived (BASE=FIRST ORDER=ASCENDING) WITH d_woman d_child d_adults d_chi
 GRAPH
   /BAR(GROUPED)=MEAN(Survived) BY mwc BY d_adults
   /INTERVAL CI(95.0).
-
-
-
-
